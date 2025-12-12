@@ -74,6 +74,68 @@ footer a {
     color: #e67e22; /* Highlight email in orange */
     text-decoration: none;
 }
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 50px;
+    background-color: #f9f9f9;
+    color: #333333;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2a4d9b; /* Royal blue */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e67e22; /* Orange on hover */
+}
+
+/* Headings */
+h1 {
+    font-size: 40px;
+    color: #2a4d9b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Service list highlight (if used on other pages) */
+ul li strong {
+    color: #e67e22;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #e67e22;
+    text-decoration: none;
+}
 
 
 
