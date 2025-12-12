@@ -52,5 +52,28 @@ footer {
     font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 1px;
+}body {
+    text-align: center; /* Center your content */
+    padding: 50px;      /* Add space from top */
+    font-family: Arial, sans-serif; /* Clean professional font */
 }
+
+footer {
+    margin-top: 50px;   /* Give space between content and footer */
+    font-size: 14px;    /* Slightly smaller footer text */
+}h1 {
+    font-size: 40px;     /* Bigger headline */
+    color: #2a4d9b;      /* Royal blue to look premium */
+}
+
+p {
+    font-size: 18px;     /* Easy to read */
+    color: #333333;      /* Dark grey for clean look */
+}
+footer a {
+    color: #e67e22; /* Highlight email in orange */
+    text-decoration: none;
+}
+
+
 
