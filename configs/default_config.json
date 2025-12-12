@@ -1,0 +1,7 @@
+{
+  "project_name": "Neuranet Website",
+  "version": "1.0",
+  "debug_mode": true,
+  "model_path": "models/placeholder_model.txt",
+  "data_path": "data/sample_dataset.csv"
+}
