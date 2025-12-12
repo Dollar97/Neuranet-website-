@@ -48,4 +48,9 @@ footer {
     margin-top: 40px;
     text-align: center;
     color: #777;
+}h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
+
