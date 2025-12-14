@@ -5,181 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | NeuraNet</title>
   <meta name="description" content="Explore NeuraNet's services: CV & LinkedIn optimization, digital branding, websites, and AI-powered business automation solutions.">
-  <meta name="keywords" content="NeuraNet, services, CV writing, LinkedIn optimization, AI automation, digital branding, web design, business automation">
   <style>
-    :root {
-      --primary: #0f172a;
-      --accent: #38bdf8;
-      --bg: #f8fafc;
-      --text: #1f2937;
-      --muted: #64748b;
-      --card: #ffffff;
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Inter, system-ui, -apple-system, sans-serif;
-      line-height: 1.7;
-      color: var(--text);
-      background: var(--bg);
-    }
-    nav {
-      background: rgba(2,6,23,0.95);
-      padding: 14px 20px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    nav a {
-      color: #e5e7eb;
-      margin: 0 14px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-    nav a:hover { color: var(--accent); }
-
-    header.hero {
-      background: url('https://images.unsplash.com/photo-1581091012184-7d378c6a3142?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
-      color: #fff;
-      padding: 140px 20px 100px;
-      text-align: center;
-      position: relative;
-    }
-    header.hero::after {
-      content: "";
-      position: absolute;
-      top:0; left:0; width:100%; height:100%;
-      background: rgba(0,0,0,0.5);
-      z-index: 0;
-    }
-    header.hero h1, header.hero p, header.hero .cta-btn {
-      position: relative;
-      z-index: 1;
-    }
-    header.hero h1 { font-size: 3rem; margin-bottom: 14px; letter-spacing: -0.5px; }
-    header.hero p { font-size: 1.2rem; max-width: 720px; margin: 10px auto 30px; }
-    .cta-btn {
-      display: inline-block; padding: 14px 36px; background: var(--accent);
-      color: #020617; text-decoration: none; border-radius: 999px;
-      font-weight: 700; font-size: 1rem; transition: transform 0.2s;
-    }
-    .cta-btn:hover { transform: scale(1.05); }
-
-    section { padding: 80px 20px; max-width: 1100px; margin: auto; }
-    section h2 { font-size: 2.2rem; margin-bottom: 18px; color: var(--primary); letter-spacing: -0.3px; }
-    section p { max-width: 780px; color: var(--muted); font-size: 1.05rem; margin-bottom: 30px; }
-
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; margin-top: 40px; }
-    .card {
-      background: var(--card); padding: 34px 28px; border-radius: 16px;
-      box-shadow: 0 20px 40px rgba(2,6,23,0.06);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 30px 60px rgba(2,6,23,0.1); }
-    .card h3 { margin-top: 0; margin-bottom: 10px; color: var(--primary); font-size: 1.25rem; }
-    .card p { color: var(--muted); }
-
-    .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 40px; }
-    .testimonial-card {
-      background: var(--card); padding: 28px; border-radius: 16px; box-shadow: 0 15px 30px rgba(2,6,23,0.06);
-    }
-    .testimonial-card p { font-style: italic; color: var(--text); }
-    .testimonial-card h4 { margin-top: 12px; font-size: 1rem; color: var(--primary); }
-
-    .cta { background: linear-gradient(135deg, #0f172a, #020617); color: #fff; text-align: center; padding: 90px 20px; }
-    .cta h2 { color: #fff; }
-    .cta p { color: #cbd5f5; margin: auto; }
-    .cta a { display: inline-block; margin-top: 30px; padding: 14px 36px; background: var(--accent); color: #020617; text-decoration: none; border-radius: 999px; font-weight: 700; font-size: 0.95rem; }
-
-    footer { background: #020617; color: #94a3b8; padding: 60px 20px; }
-    .footer-grid { max-width: 1100px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
-    footer h4 { color: #fff; margin-bottom: 12px; font-size: 1.05rem; }
-    footer a { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 8px; font-size: 0.95rem; }
-    footer a:hover { color: var(--accent); }
-    .copyright { text-align: center; margin-top: 40px; font-size: 0.85rem; color: #64748b; }
+    :root{--primary:#0f172a;--accent:#38bdf8;--bg:#f8fafc;--text:#1f2937;--muted:#64748b;--card:#fff;}
+    body{margin:0;font-family:'Segoe UI',Inter,sans-serif;line-height:1.7;color:var(--text);background:var(--bg);scroll-behavior:smooth;}
+    nav{background:rgba(2,6,23,0.95);padding:14px 20px;text-align:center;position:sticky;top:0;z-index:10;}
+    nav a{color:#e5e7eb;margin:0 14px;text-decoration:none;font-weight:600;transition:0.3s;}
+    nav a:hover{color:var(--accent);}
+    header.hero{background:url('https://images.unsplash.com/photo-1581091012184-7d378c6a3142?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;color:#fff;padding:140px 20px 100px;text-align:center;position:relative;overflow:hidden;}
+    header.hero::after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:0;}
+    header.hero h1, header.hero p, .cta-btn{position:relative; z-index:1; opacity:0; transform:translateY(20px); animation:fadeInUp 1s forwards 0.3s;}
+    header.hero h1{font-size:3rem;margin-bottom:14px;}
+    header.hero p{font-size:1.2rem;max-width:720px;margin:10px auto 30px;}
+    .cta-btn{display:inline-block;padding:14px 36px;background:var(--accent);color:#020617;text-decoration:none;border-radius:999px;font-weight:700;transition:0.2s;}
+    .cta-btn:hover{transform:scale(1.05);box-shadow:0 5px 20px rgba(56,189,248,0.5);}
+    section{padding:80px 20px;max-width:1100px;margin:auto;}
+    section h2{font-size:2.2rem;margin-bottom:18px;color:var(--primary);opacity:0;transform:translateY(20px);}
+    section p{max-width:780px;color:var(--muted);font-size:1.05rem;margin-bottom:30px;opacity:0;transform:translateY(20px);}
+    .fade-in{opacity:0;transform:translateY(20px);transition:all 0.8s ease-out;}
+    .fade-in.visible{opacity:1;transform:translateY(0);}
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-top:40px;}
+    .card{background:var(--card);padding:34px 28px;border-radius:16px;box-shadow:0 20px 40px rgba(2,6,23,0.06);transition:transform 0.3s, box-shadow 0.3s;opacity:0;transform:translateY(20px);}
+    .card:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 30px 60px rgba(2,6,23,0.1);}
+    .cta{background:linear-gradient(135deg,#0f172a,#020617);color:#fff;text-align:center;padding:90px 20px;}
+    .cta h2{color:#fff;}
+    .cta p{color:#cbd5f5;margin:auto;}
+    .cta a{display:inline-block;margin-top:30px;padding:14px 36px;background:var(--accent);color:#020617;text-decoration:none;border-radius:999px;font-weight:700;transition:0.2s;}
+    .cta a:hover{transform:scale(1.05);}
+    footer{background:#020617;color:#94a3b8;padding:60px 20px;}
+    .footer-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;}
+    footer h4{color:#fff;margin-bottom:12px;font-size:1.05rem;}
+    footer a{color:#94a3b8;text-decoration:none;display:block;margin-bottom:8px;}
+    footer a:hover{color:var(--accent);}
+    .copyright{text-align:center;margin-top:40px;font-size:0.85rem;color:#64748b;}
+    #scrollTopBtn{position:fixed;bottom:40px;right:40px;z-index:99;border:none;outline:none;background-color:var(--accent);color:#020617;cursor:pointer;padding:12px 18px;border-radius:50px;font-size:1rem;display:none;transition:0.3s;}
+    #scrollTopBtn:hover{background-color:#0ea5e9;}
+    @keyframes fadeInUp{to{opacity:1;transform:translateY(0);}}
   </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html">Home</a>
+  <a href="index.html#home">Home</a>
   <a href="about.html">About</a>
-  <a href="services.html">Services</a>
+  <a href="#services">Services</a>
   <a href="index.html#contact">Contact</a>
 </nav>
 
-<header class="hero">
+<header class="hero" id="home">
   <h1>Our Services</h1>
-  <p>Explore how NeuraNet helps professionals and businesses with premium CVs, digital branding, websites, and AI-powered automation.</p>
+  <p>Discover how NeuraNet helps professionals and businesses grow with premium CVs, websites, branding, and AI-powered automation.</p>
   <a href="https://wa.me/254707017893" target="_blank" class="cta-btn">Chat on WhatsApp</a>
 </header>
 
-<section>
-  <h2>Core Services</h2>
+<section id="services">
+  <h2 class="fade-in">Core Services</h2>
+  <p class="fade-in">Our services are designed to save time, enhance professionalism, and scale business growth.</p>
   <div class="services">
-    <div class="card">
-      <h3>CV & LinkedIn Optimization</h3>
-      <p>We craft professional CVs and LinkedIn profiles designed to attract recruiters, pass ATS systems, and secure interviews.</p>
-    </div>
-    <div class="card">
-      <h3>Websites & Digital Branding</h3>
-      <p>Custom websites and personal brand designs that communicate credibility, trust, and professionalism.</p>
-    </div>
-    <div class="card">
-      <h3>AI-Powered Business Automation</h3>
-      <p>Smart workflows, chatbots, and AI tools that reduce manual work, improve efficiency, and streamline business operations.</p>
-    </div>
+    <div class="card"><h3>CV & LinkedIn Optimization</h3><p>Professional CVs and LinkedIn profiles crafted to attract recruiters, pass ATS systems, and secure interviews.</p></div>
+    <div class="card"><h3>Websites & Digital Branding</h3><p>Modern websites and branding that communicate credibility, trust, and professionalism.</p></div>
+    <div class="card"><h3>AI-Powered Business Automation</h3><p>Automation workflows and chatbots that reduce manual work, improve efficiency, and streamline business operations.</p></div>
   </div>
 </section>
 
-<section>
-  <h2>Client Testimonials</h2>
-  <div class="testimonials">
-    <div class="testimonial-card">
-      <p>"NeuraNet transformed my LinkedIn profile and my business automation workflow. Amazing results!"</p>
-      <h4>- Njeri K.</h4>
-    </div>
-    <div class="testimonial-card">
-      <p>"Professional, fast, and reliable. Their branding services boosted my business credibility instantly."</p>
-      <h4>- Walter O.</h4>
-    </div>
-    <div class="testimonial-card">
-      <p>"The AI-powered automation saved me hours every week. Highly recommend NeuraNet!"</p>
-      <h4>- Amina L.</h4>
-    </div>
+<section id="testimonials">
+  <h2 class="fade-in">Client Testimonials</h2>
+  <div class="services">
+    <div class="card"><p>"NeuraNet transformed my LinkedIn profile and business workflow. Amazing results!"</p><h4>- Njeri K.</h4></div>
+    <div class="card"><p>"Professional, fast, and reliable. Their branding services boosted my business credibility instantly."</p><h4>- Walter O.</h4></div>
+    <div class="card"><p>"The AI automation saved me hours every week. Highly recommend NeuraNet!"</p><h4>- Amina L.</h4></div>
   </div>
 </section>
 
 <section class="cta">
   <h2>Ready to Elevate Your Business?</h2>
-  <p>Contact us today and let’s create intelligent, professional, and impactful solutions for you.</p>
+  <p>Contact us today to get professional, intelligent, and impactful solutions.</p>
   <a href="https://wa.me/254707017893" target="_blank">Chat on WhatsApp</a>
 </section>
 
+<button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
+
 <footer>
   <div class="footer-grid">
-    <div>
-      <h4>NeuraNet</h4>
-      <p>AI-powered writing, branding & business automation</p>
-    </div>
-    <div>
-      <h4>Navigation</h4>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <a href="https://wa.me/254707017893" target="_blank">WhatsApp: +254 707 017 893</a>
-      <a href="mailto:walterbrian1997@gmail.com">walterbrian1997@gmail.com</a>
-    </div>
-  </div>
-  <div class="copyright">
-    © 2025 NeuraNet. All rights reserved.
-  </div>
-</footer>
-
-</body>
-</html>
+    <div><h4>NeuraNet</h4><p>AI-powered writing, branding & business automation</p></div>
+    <div><h4
