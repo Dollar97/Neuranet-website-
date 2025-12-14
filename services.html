@@ -1,65 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Services | NeuraNet</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | NeuraNet</title>
+  <meta name="description" content="Explore NeuraNet's services: CV & LinkedIn optimization, digital branding, websites, and AI-powered business automation solutions.">
+  <meta name="keywords" content="NeuraNet, services, CV writing, LinkedIn optimization, AI automation, digital branding, web design, business automation">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #38bdf8;
+      --bg: #f8fafc;
+      --text: #1f2937;
+      --muted: #64748b;
+      --card: #ffffff;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Inter, system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+    nav {
+      background: rgba(2,6,23,0.95);
+      padding: 14px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #e5e7eb;
+      margin: 0 14px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    nav a:hover { color: var(--accent); }
 
+    header.hero {
+      background: url('https://images.unsplash.com/photo-1581091012184-7d378c6a3142?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+      color: #fff;
+      padding: 140px 20px 100px;
+      text-align: center;
+      position: relative;
+    }
+    header.hero::after {
+      content: "";
+      position: absolute;
+      top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    header.hero h1, header.hero p, header.hero .cta-btn {
+      position: relative;
+      z-index: 1;
+    }
+    header.hero h1 { font-size: 3rem; margin-bottom: 14px; letter-spacing: -0.5px; }
+    header.hero p { font-size: 1.2rem; max-width: 720px; margin: 10px auto 30px; }
+    .cta-btn {
+      display: inline-block; padding: 14px 36px; background: var(--accent);
+      color: #020617; text-decoration: none; border-radius: 999px;
+      font-weight: 700; font-size: 1rem; transition: transform 0.2s;
+    }
+    .cta-btn:hover { transform: scale(1.05); }
+
+    section { padding: 80px 20px; max-width: 1100px; margin: auto; }
+    section h2 { font-size: 2.2rem; margin-bottom: 18px; color: var(--primary); letter-spacing: -0.3px; }
+    section p { max-width: 780px; color: var(--muted); font-size: 1.05rem; margin-bottom: 30px; }
+
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; margin-top: 40px; }
+    .card {
+      background: var(--card); padding: 34px 28px; border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(2,6,23,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 30px 60px rgba(2,6,23,0.1); }
+    .card h3 { margin-top: 0; margin-bottom: 10px; color: var(--primary); font-size: 1.25rem; }
+    .card p { color: var(--muted); }
+
+    .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 40px; }
+    .testimonial-card {
+      background: var(--card); padding: 28px; border-radius: 16px; box-shadow: 0 15px 30px rgba(2,6,23,0.06);
+    }
+    .testimonial-card p { font-style: italic; color: var(--text); }
+    .testimonial-card h4 { margin-top: 12px; font-size: 1rem; color: var(--primary); }
+
+    .cta { background: linear-gradient(135deg, #0f172a, #020617); color: #fff; text-align: center; padding: 90px 20px; }
+    .cta h2 { color: #fff; }
+    .cta p { color: #cbd5f5; margin: auto; }
+    .cta a { display: inline-block; margin-top: 30px; padding: 14px 36px; background: var(--accent); color: #020617; text-decoration: none; border-radius: 999px; font-weight: 700; font-size: 0.95rem; }
+
+    footer { background: #020617; color: #94a3b8; padding: 60px 20px; }
+    .footer-grid { max-width: 1100px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+    footer h4 { color: #fff; margin-bottom: 12px; font-size: 1.05rem; }
+    footer a { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 8px; font-size: 0.95rem; }
+    footer a:hover { color: var(--accent); }
+    .copyright { text-align: center; margin-top: 40px; font-size: 0.85rem; color: #64748b; }
+  </style>
+</head>
 <body>
 
 <nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="index.html#contact">Contact</a>
 </nav>
 
-<section class="services">
-    <h1>Premium AI-Powered Services</h1>
-    <p class="subtitle">
-        Smart solutions for writing, branding, automation, and digital presence.
-    </p>
+<header class="hero">
+  <h1>Our Services</h1>
+  <p>Explore how NeuraNet helps professionals and businesses with premium CVs, digital branding, websites, and AI-powered automation.</p>
+  <a href="https://wa.me/254707017893" target="_blank" class="cta-btn">Chat on WhatsApp</a>
+</header>
 
-    <div class="service-card">
-        <h2>CV & LinkedIn Revamps</h2>
-        <p>ATS-friendly documents with strong storytelling.</p>
+<section>
+  <h2>Core Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>CV & LinkedIn Optimization</h3>
+      <p>We craft professional CVs and LinkedIn profiles designed to attract recruiters, pass ATS systems, and secure interviews.</p>
     </div>
+    <div class="card">
+      <h3>Websites & Digital Branding</h3>
+      <p>Custom websites and personal brand designs that communicate credibility, trust, and professionalism.</p>
+    </div>
+    <div class="card">
+      <h3>AI-Powered Business Automation</h3>
+      <p>Smart workflows, chatbots, and AI tools that reduce manual work, improve efficiency, and streamline business operations.</p>
+    </div>
+  </div>
+</section>
 
-    <div class="service-card">
-        <h2>Website & Branding</h2>
-        <p>Modern websites with premium branding.</p>
+<section>
+  <h2>Client Testimonials</h2>
+  <div class="testimonials">
+    <div class="testimonial-card">
+      <p>"NeuraNet transformed my LinkedIn profile and my business automation workflow. Amazing results!"</p>
+      <h4>- Njeri K.</h4>
     </div>
-
-    <div class="service-card">
-        <h2>AI Automation</h2>
-        <p>Chatbots and smart workflows.</p>
+    <div class="testimonial-card">
+      <p>"Professional, fast, and reliable. Their branding services boosted my business credibility instantly."</p>
+      <h4>- Walter O.</h4>
     </div>
-
-    <div class="service-card">
-        <h2>Research & Academic Writing</h2>
-        <p>Structured, high-quality academic content.</p>
+    <div class="testimonial-card">
+      <p>"The AI-powered automation saved me hours every week. Highly recommend NeuraNet!"</p>
+      <h4>- Amina L.</h4>
     </div>
-
-    <div class="service-card">
-        <h2>Tech Tutorials & Scripts</h2>
-        <p>Beginner-friendly content for digital platforms.</p>
-    </div>
+  </div>
 </section>
 
 <section class="cta">
-    <h2>Ready to Work Together?</h2>
-    <p>Let’s build something premium.</p>
-    <a href="contact.html" class="cta-button">Request a Quote</a>
+  <h2>Ready to Elevate Your Business?</h2>
+  <p>Contact us today and let’s create intelligent, professional, and impactful solutions for you.</p>
+  <a href="https://wa.me/254707017893" target="_blank">Chat on WhatsApp</a>
 </section>
 
-<hr>
-
 <footer>
-    <p>© 2025 Walter Onyango | Email: walterbrian1997@gmail.com</p>
+  <div class="footer-grid">
+    <div>
+      <h4>NeuraNet</h4>
+      <p>AI-powered writing, branding & business automation</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="https://wa.me/254707017893" target="_blank">WhatsApp: +254 707 017 893</a>
+      <a href="mailto:walterbrian1997@gmail.com">walterbrian1997@gmail.com</a>
+    </div>
+  </div>
+  <div class="copyright">
+    © 2025 NeuraNet. All rights reserved.
+  </div>
 </footer>
 
 </body>
